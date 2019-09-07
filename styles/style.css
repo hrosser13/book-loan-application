@@ -1,0 +1,783 @@
+/*
+============================	
+         HTML BODY
+============================
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+body, header, footer, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-weight: 400;
+	color: gray;
+}
+
+a {
+	text-decoration: none;
+	color: gray;
+}
+
+a:hover {
+	color: white;
+	transition: 0.5s;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.center {
+	text-align: center;
+}
+
+.headerBorder {
+	border-bottom: 2px solid #9EBFBF;
+	padding-left: 1vw;
+}
+
+.search {
+	margin: 3vh 10vw;
+}
+
+.search input {
+	padding: 3px;
+}
+
+
+/*
+============================	
+       TOP NAVIGATION
+============================
+*/
+
+header {
+	display: flex;
+/*	border-bottom: 5px solid #595555;*/
+}
+
+
+nav {
+	background-color: #F0F0F0;
+	height: 50px;
+	overflow: hidden;
+	z-index: 1;
+	display: flex;
+	flex: 1;
+}
+
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding-right: 2vw;
+}
+
+nav li {
+	padding: 8px;
+	background-color: #F6F6F7;
+}
+
+nav h1 {
+	flex: 1;
+	align-self: center;
+	padding-left: 2vw;
+	color: #599494;
+}
+
+
+nav li:hover {
+	background-color: #F0F0F0;
+	transition: 0.5s;
+	color: black;
+}
+
+nav li a:hover {
+	color: black;
+	transition: 0.5s;
+}
+
+.active a {
+	color: #599494;
+}
+
+nav .fa-bars {
+	display: none;
+	color: gray;
+}
+
+/* Responsive Nav Bar */
+#hiddenNav, #hiddenNav2, #hiddenNav3, #hiddenNav4, #hiddenNav5 {
+	display: none;
+	background-color: #eaeaeb;
+}
+
+#hiddenMenu, #hiddenMenu2, #hiddenMenu3, #hiddenMenu4, #hiddenMenu5 {
+	display: block;
+	text-align: center;
+}
+
+.hiddenMenuClass li {
+	padding: 3vh 0;
+	border-bottom: 1px solid white;
+
+}
+
+.hiddenMenuClass li:hover {
+	background-color: white;
+	transition: 0.5s;
+}
+
+
+/*
+============================	
+       	  FOOTER
+============================
+*/
+
+footer {
+	background-color: #403D3D;
+	color: white;
+	padding: 4vh 0;
+}
+
+footer a{
+	color: white;
+}
+
+footer a:hover{
+	color: gray;
+}
+
+.footer-flex {
+	display: flex;
+}
+
+.footer-links {
+	flex: 1;
+}
+
+footer ul {
+	list-style: none;
+}
+
+.footer-title {
+	text-align: center;
+	margin: 6vh 5vw 0 5vw;
+	padding-top: 4vh;
+	border-top: 1px solid gray;
+}
+
+.footer-links {
+	text-align: center;
+}
+
+.footer-links a {
+	padding: 0 3vw;
+}
+
+.small {
+	color: gray;
+	font-size: 0.7em;
+}
+
+.footerlinksMediaQ {
+	display: none;
+}
+
+/*
+============================	
+       TABLE FORMAT
+============================
+*/
+
+table {
+	border-collapse: collapse;
+	width: 80%;
+	margin: auto;
+}
+
+table, th, td {
+	border: 1px solid #FAFAFA;
+}
+
+th {
+	padding: 15px;
+	background-color: #BFDBDB;
+	color: white;
+	text-align: left;
+}
+
+td {
+	padding: 15px;
+}
+
+
+tr:nth-child(even) {
+	background-color: #FAFAFA;
+}
+
+
+tr:hover {
+	background-color: #F0F0F0;
+}
+
+
+
+
+
+
+/*
+============================	
+         INDEX PAGE
+============================
+*/
+
+
+/*  
++++++++++++++++++++++++++++  
+MAIN CONTAINER W/ BIG IMAGE  
++++++++++++++++++++++++++++  
+*/
+
+.main-container {
+	position: relative;
+	text-align: center;
+	color: white;
+	background-image: linear-gradient(#B8E2ED, white);
+}
+
+.main-container h2{
+	color: black;
+	background-color: rgba(255,255,255,0.8);
+	padding: 2%;
+	border-radius: 5px;
+}
+
+.main-container h2:hover{
+	color: black;
+	background-color: rgba(255,255,255,0.3);
+	padding: 2%;
+}
+
+.main-container a {
+	color: black;
+}
+
+.main-container img {
+	max-width: 100%;
+	opacity: 0.2;
+}
+
+.text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.mediaQText {
+	display: none; 
+}
+
+.mediaQText h2 {
+	color: black;
+	background-color: #C9E0E0;
+}
+
+
+
+
+/*  
++++++++++++++++++++++++++++  
+	LIBRARY COLLECTION 
++++++++++++++++++++++++++++  
+*/
+
+#dataHeader {
+	text-align: center;
+	margin: 10vh 0 0 0;
+	text-transform: uppercase;
+}
+
+#dataLine {
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+	margin: 0 0 10vh 0;
+	color: #9EBFBF;
+}
+
+.welcome-menu {
+	display: flex;
+	margin: 4vh 0;
+}
+
+.welcome-menu h3 {
+	border-bottom: none;
+	color: #9EBFBF;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.welcome-menu p {
+	color: gray;
+	margin-bottom: 10vh;
+}
+
+
+.system-div {
+	flex: 1;
+	text-align: center;
+}
+
+.system-div h3:hover {
+	color: #C9E0E0;
+	transition: 0.5s;
+}
+
+.system-div span:hover {
+	opacity: 50%;
+	transition: 0.5s;
+}
+
+
+.fa-user, .fa-book, .fa-book-reader {
+	color: #C9E0E0;
+	border: 1px solid #D7F0F0;
+	padding: 6%;
+	border-radius: 50%;
+}
+
+.fa-user:hover, .fa-book:hover, .fa-book-reader:hover {
+	color: #D7F0F0;
+	border: 1px solid #D7F0F0;
+}
+
+
+
+/*  
++++++++++++++++++++++++++++  
+	 SERVICES SECTION 
++++++++++++++++++++++++++++  
+*/
+
+.welcome-container {
+	display: flex;
+	margin: 2vh 1vw;
+}
+
+.opening-text {
+	flex: 3;
+}
+
+.timetable {
+	background-color: #eaeaeb;
+	padding: 2%;
+	flex: 1;
+	margin: 2%;
+	border: 2px dotted #9EBFBF;
+}
+
+.timetable p {
+	font-size: 0.8em;
+}
+
+.alignLeft {
+	float:left;
+	text-align: left;
+}
+
+.alignRight {
+	float:right;
+	text-align: left;
+}
+
+.timetable h3 {
+	background-color: #9EBFBF;
+	text-align: center;
+	color: white;
+}
+
+.clear {
+	clear: both;
+	text-align: center;
+}
+
+
+
+/*  
++++++++++++++++++++++++++++  
+	INFORMATION SECTION 
++++++++++++++++++++++++++++  
+*/
+
+.container-info {
+	display: flex;
+	background-color: #eaeaeb;
+}
+
+.info {
+	margin: 0 1vw;
+	padding: 1%;
+}
+
+.info h4 {
+	text-align: center;
+}
+
+
+
+
+
+
+
+/*
+============================	
+       USERS PAGE
+============================
+*/
+
+#userLoansP {
+	margin-left: 2vw;
+}
+
+#container-update {
+	display: flex;
+	margin: 3vh 2vw;
+	border: 2px dotted black;
+	background-color: white;
+
+}
+
+#container-update h4 {
+	text-align: center;
+}
+
+#result {
+	flex: 1;
+	padding: 10px;
+}
+
+#updateForm {
+	flex: 1;
+	padding: 10px;
+}
+
+.x-button {
+	flex: 1;
+	background-color: #ebebeb;
+}
+
+.createForm form {
+	border-radius: 5px;
+  	background-color: #f2f2f2;
+  	padding: 20px;
+	width: 60%;
+	margin: 5vh auto;
+}
+
+legend {
+	text-align: center;
+}
+
+.smallBtn {
+	background-color: #D6EDED;
+	color: gray;
+	padding: 6px;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+}
+
+.smallBtn:hover {
+	background-color: #9EC2C2;
+	color: #D6EDED;
+}
+
+.deleteBtn {
+	background-color: gray;
+	color: white;
+	padding: 6px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.deleteBtn:hover {
+	background-color: #4C4C4C;
+	color: gray;
+}
+
+.button {
+  background-color: #79ADAD;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+}
+
+.button:hover {
+  background-color: #5C8585;
+  color: #79ADAD;
+}
+
+.buttons {
+	background-color: white;
+	margin: 0 2vw;
+}
+
+.fa-times {
+	float: right;
+	color: #79ADAD;
+}
+
+.fa-times:hover {
+	cursor: pointer;
+}
+
+#container-update h4{
+	color: #403D3D;
+	text-decoration: underline;
+}
+
+
+
+/*
+============================	
+        BOOKS PAGE
+============================
+*/
+
+#container-updateBook {
+	display: flex;
+	margin: 4vh auto;
+	width: 80%;
+	border: 1px dotted gray;
+	background-color: #eaeaeb;
+}
+
+#bookResult {
+	flex: 1;
+	padding: 10px;
+}
+
+#bookResult ul {
+	padding-left: 2vw;
+	list-style: none;
+}
+
+#addAuthorForm, #updateBookForm {
+	flex: 1;
+	padding: 10px;
+}
+
+
+
+/*
+============================	
+       AUTHORS PAGE
+============================
+*/
+
+.updateSect {
+	background-color: #eaeaeb;
+	margin: 5vh auto;
+	width: 50%;
+	padding: 10px;
+	border: 1px dotted teal;
+	border-radius: 4px;
+}
+
+.updateSect h4 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.wideInput {
+	width: 100%;
+  	padding: 12px;
+  	border: 1px solid #ccc;
+  	border-radius: 4px;
+ 	margin-top: 6px;
+  	margin-bottom: 16px;
+  	resize: vertical;
+}
+
+
+
+
+
+/*
+============================	
+       MEDIA QUERIES
+============================
+*/
+
+
+@media (max-width: 950px) {
+
+	/* main header */
+	h1 {
+		font-size: 1.2em;
+	}
+
+	/* Tables */
+	table {
+	width: 97%;
+	font-size: 0.9em;
+	}
+
+	/* forms */
+	.createForm form {
+		width: 95%;
+	}
+
+	/* search bars */
+	.search {
+	margin: 2vh 3vw;
+	text-align: center;
+	}
+
+	.search input {
+	padding: 10px 20px;
+	}
+
+}
+
+
+@media(max-width: 700px) {
+
+	/* main header and navigation */
+	header {
+		display: block;
+	}
+
+	nav {
+		height: auto;
+		display: block;
+	}
+
+	nav ul {
+		display: block;
+		text-align: center;
+		width: 100%;
+		margin-top: 2vh;
+		display: none;
+	}
+
+	nav li {
+		border-bottom: 1px solid white;
+		padding: 3vh 0;
+	}
+
+	nav .fa-bars {
+		display: inline-block;
+		float: right;
+		margin-right: 2vw;
+		margin-top: 1vh;
+		cursor: pointer;
+	}
+
+
+	h1 {
+		font-size: 1.5em;
+		display: inline-block;
+	}
+
+
+	.headerBorder {
+		text-align: center;
+		margin: 4vh auto;
+	}
+
+	/* Forms and buttons */
+	.welcome-container, .container-info, #container-update {
+		display: block;
+	}
+
+	#container-updateBook {
+		display: block;
+		width: 98%;
+	}
+
+	.button {
+  		padding: 3vh 15vw;
+  		font-size: 1em;
+	}
+
+	.deleteBtn {
+		padding: 2vh 20vw;
+		display: block;
+		font-size: 1em;
+	}
+
+
+	.smallBtn {
+  		padding: 2vh 15vw;
+  		display: block;
+  		font-size: 1em;
+  		margin-bottom: 2vh;
+	}
+
+	.updateSect {
+		width: 97%;
+	}
+
+}
+
+@media(max-width: 550px) {
+	.welcome-menu {
+		display: block;
+		margin: 4vh 0;
+	}
+
+	.text {
+		display: none;
+	}
+
+	.mediaQText {
+		display: block;
+	}
+
+}
+
+@media(max-width: 500px) {
+	table {
+		width: 100%;
+		font-size: 0.7em;
+	}
+}
+
+@media (max-width: 430px) {
+	table {
+		font-size: 0.6em;
+	}
+
+	.createForm form {
+		width: 100%;
+	}
+
+}
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Authors</title>
+
+	    <!-- CSS -->
+	    <link rel="stylesheet" href="styles/style.css">
+
+	    <!-- FONTS + SYMBOLS -->
+	  	<link href="https://fonts.googleapis.com/css?family=Raleway|Open+Sans" rel="stylesheet">
+	  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	</head>
+
+
+	<body>
+
+		<!-- HEADER NAVIGATION BAR -->
+
+		<header>
+			<nav>
+				<h1>Library Service</h1>
+				<span class="fas fa-bars fa-2x" id="toggle4"></span>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="users.html">Users</a></li>
+					<li><a href="books.html">Books</a></li>
+					<li class="active"><a href="">Authors</a></li>
+					<li><a href="loans.html">Loans</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="hiddenNav4">
+			<ul id="hiddenMenu4" class="hiddenMenuClass">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="users.html">Users</a></li>
+				<li><a href="books.html">Books</a></li>
+				<li class="active"><a href="authors.html">Authors</a></li>
+				<li><a href="loans.html">Loans</a></li>
+			</ul>
+		</div>
+
+
+		<div>
+
+			<p class="center"><a href="#viewBooks">View All Authors</a> - <a href="#searchAuthors">Search Authors</a> - <a href="#addAuthorHeader">Add New Author</a></p>
+
+		</div>
+
+
+		<!-- MAIN AUTHOR DISPLAY SECTION -->
+
+		<main>
+	      	<h3 id="viewBooks" class="headerBorder">Authors</h3>
+
+	      	<!-- Search function -->
+	      	<section class="search">
+		      	<h4 id="searchAuthors">Search Authors</h4>
+		      	<input type="text" id="searchAName" placeholder="Search by Name...">
+		      	<input type="text" id="searchABook" placeholder="Search by Book...">
+	      	</section>
+
+			<!-- Authors Table -->   	
+	      	<table id="authorsTable">
+	        	<thead>
+	          		<tr>
+	            		<th>ID</th>
+	            		<th>Name</th>
+	            		<th>Select</th>
+	            		<th>Books</th>
+	         		</tr>
+	          </thead>
+
+	      	</table>
+    	</main>
+
+
+    	<!-- Delete and Update Buttons -->
+    	<div>
+	    	<br>
+	    	<center>
+		    	<input id="updateAuthBtn" type="button" value="Update Details" class="smallBtn">
+		    	<input id="delAuthBtn" type="button" value="Delete" class="deleteBtn">
+	    	</center><br>
+    	</div>
+
+
+
+    	<!-- UPDATE AUTHOR SECTION -->
+
+    	<section id="updateAuthOutput" class="updateSect">
+
+    		<h4>Update Author Details</h4>
+
+    		<!-- Update Author Form -->
+    		<form name="updateAuthForm" id="updateAuthForm">
+				<p>Author Name: <input id="updateAuthName" class="wideInput" type="text" placeholder="New Author Name..." required></p>
+
+				<center><input id="updateAuthSubmit" type="button" value="UPDATE AUTHOR" class="button"></center>
+			</form>
+
+    	</section>
+
+
+
+
+    	<!-- CREATE AUTHOR SECTION -->
+
+    	<section class="createUser">
+    		<!-- Create Author Header -->
+    		<div class="createHeader">
+    			<h3 id="addAuthorHeader" class="headerBorder">Add New Author</h3>
+    		</div>
+
+    		<!-- Create Author Form -->
+    		<div class="createForm">
+		    	<form name="myform">
+		    		<fieldset>
+		    			<legend>Create Author</legend>
+						<p>Name:  <input id="authorName" type="text" placeholder="Author name..." class="wideInput" required></p>
+					
+						<center><input id="submitAuthor" type="button" value="CREATE" name="Submit" class="button"></center>
+					</fieldset>
+				</form>
+			</div>
+		</section>
+
+
+
+		<!-- FOOTER -->
+
+		<footer>
+			<div class="footer-flex">
+				<!-- Footer Links -->
+				<div class="footer-links">
+					<p>
+						<a href="">Users</a> -
+						<a href="">Books</a> -
+						<a href="">Authors</a> -
+						<a href="">Loans</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- Footer Title -->
+			<div class="footer-title">
+				<h3>PontyBridge University</h3>
+				<p class="small">1 University Lane, Little Bridge, Pontyville, PB9 5PB</p>
+			</div>
+		</footer>
+
+
+
+		<!-- JQUERY + JAVASCRIPT -->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="scripts/authors-script.js"></script>
+
+	</body>
+</html>

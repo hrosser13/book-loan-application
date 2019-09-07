@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Users</title>
+
+	    <!-- CSS -->
+	    <link rel="stylesheet" href="styles/style.css">
+
+	    <!-- FONTS + SYMBOLS -->
+	  	<link href="https://fonts.googleapis.com/css?family=Raleway|Open+Sans" rel="stylesheet">
+	  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	</head>
+
+
+	<body>
+
+		<!-- HEADER NAVIGATION BAR -->
+
+		<header>
+			<nav id="navbar">
+				<h1>Library Service</h1>
+				<span class="fas fa-bars fa-2x" id="toggle2"></span>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="">Users</a></li>
+					<li><a href="books.html">Books</a></li>
+					<li><a href="authors.html">Authors</a></li>
+					<li><a href="loans.html">Loans</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="hiddenNav2">
+			<ul id="hiddenMenu2" class="hiddenMenuClass">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="">Users</a></li>
+				<li><a href="books.html">Books</a></li>
+				<li><a href="authors.html">Authors</a></li>
+				<li><a href="loans.html">Loans</a></li>
+				</ul>
+		</div>
+
+
+
+		<!-- Link Section -->
+		<div>
+			<p class="center"><a href="#allUsers">View All Users</a> - <a href="#searchUsers">Search Users</a> - <a href="#addUserHeader">Add New User</a></p>
+		</div>
+
+
+
+		<!-- MAIN USER DISPLAY SECTION -->
+
+		<main>
+	    	<h3 id="allUsers" class="headerBorder">Library Users</h3>
+
+	      	<!-- Search Users Table -->
+	      	<section class="search" id="searchUsers">
+	      		<h4>Search</h4>
+	      		<input type="text" id="searchUserN" placeholder="Search by Name">
+	      		<input type="text" id="searchUserBC" placeholder="Search by Barcode">
+	  		</section>
+
+	      	<table id="usersTable">
+	          	<thead>
+	          		<tr>
+	            		<th>ID</th>
+	            		<th>Name</th>
+	            		<th>Barcode</th>
+	            		<th>Member Type</th>
+	            		<th>Select</th>
+	          		</tr>
+	          	</thead>
+
+	      	</table><br>
+	    </main>
+
+    	
+    	<!-- Buttons -->
+	    <div class="buttons">
+	    	<center><input id="updateUser" type="button" value="View Details & Update" class="smallBtn">
+	    	<input id="deleteUser" type="button" value="Delete" class="deleteBtn"></center><br>
+		</div>
+
+
+
+		<!-- UPDATE USER SECTION -->
+
+    	<section id="container-update">
+
+    		<!-- User Details -->
+
+		    <div id="result">
+		    	<h4>User Details</h4>
+		    	<p id="userDetailsP"></p>
+		    	<h4 id="loanHeader">Loans</h4>
+		    	<p id="userLoansP">This user has no loans.</p>
+		    </div>
+
+
+		    <!-- Update User Form -->
+
+		    <div id="updateForm">
+
+		    	<!-- Exit Button -->
+		    	<span id="exit" class="fas fa-times fa-2x"></span>
+
+		    	<!-- Form -->
+		    	<h4>Update User</h4>
+		    	<form id="updateHidden">
+					<p>Full Name: <input id="updateName" type="text" name="updateName" placeholder="Update user's name..." class="wideInput" required></p>
+
+		   			<p>Barcode: <input type="text" id="updateBarcode" name="updateBarcode" placeholder="Update user's barcode..." class="wideInput" required></p>
+
+		   		 	<p>Member Type: <br>
+		    		<input type="radio" name="updateMemberType" id="updateStaff" value="Staff">Staff<br>
+		  			<input type="radio" name="updateMemberType" id="updateStudent" value="Student" checked>Student<br><br></p>
+
+		  			<!-- Submit Button -->
+					<center><input id="updateButton" type="button" value="UPDATE" name="updateButton" class="button"></center>
+				</form>
+		    </div>
+
+		</section>
+
+
+
+
+    	<!-- CREATE NEW USER SECTION -->
+
+	    <section class="createUser">
+
+	    	<!-- Add New User Header -->
+	    	<div class="createHeader">
+	    		<h3 id="addUserHeader" class="headerBorder">Add New User</h3>
+	    	</div>
+
+	    	<!-- Create New User Form -->
+	    	<div class="createForm">
+			    <form name="newUserForm">
+			    	<fieldset>
+			    		<legend>Create User</legend>
+						<p>Full Name: <input id="name" type="text" placeholder="Full name..." class="wideInput" required></p>
+
+					    <p>Barcode: <input type="text" id="barcode" placeholder="Barcode..." class="wideInput" required></p>
+
+					    <p>Member Type: <br>
+					    <input type="radio" name="memberType" id="staff" value="Staff">Staff<br>
+					  	<input type="radio" name="memberType" id="student" value="Student" checked>Student</p><br>
+
+					  	<!-- Create User Submit Button -->
+						<center><input id="creatUSubmit" type="button" value="CREATE" name="Submit" class="button"></center>
+					</fieldset>
+				</form>
+			</div>
+
+		</section>
+
+
+
+
+		<!-- FOOTER -->
+
+		<footer>
+			<div class="footer-flex">
+				<!-- Footer Links -->
+				<div class="footer-links">
+					<p>
+						<a href="">Users</a> -
+						<a href="">Books</a> -
+						<a href="">Authors</a> -
+						<a href="">Loans</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- Footer Title -->
+			<div class="footer-title">
+				<h3>PontyBridge University</h3>
+				<p class="small">1 University Lane, Little Bridge, Pontyville, PB9 5PB</p>
+			</div>
+		</footer>
+
+
+
+		<!-- JQUERY + JAVASCRIPT -->
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="scripts/users-script.js"></script>
+
+
+	</body>
+</html>
